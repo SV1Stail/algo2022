@@ -11,7 +11,7 @@
 massiv=input("Введи числа в строку через запятую: ").split(",")
 print(*mas(massiv))
 '''
-
+'''
 
 
 def mas(mas):
@@ -29,8 +29,8 @@ def mas(mas):
             mas[i]=mas[index]
             mas[index]=x
     return mas
-'''massiv=input("Введи числа в строку через запятую: ").split(",")
-print(*mas(massiv), end=" ")'''
+#massiv=input("Введи числа в строку через запятую: ").split(",") 
+#print(*mas(massiv), end=" ")
 
 #бинарный поиск
 massiv=[2,3,4,1,4,5,6,7,56,7,4,3,5,7]
@@ -48,10 +48,12 @@ while l<r:
     else:
         l=midle
         print(l)
-        break
+        break'''
 
-
-
-
-
+stroka="g fmnc wms bgblr rpylqjyrc gr zw fylb. rfyrq ufyr amknsrcpq ypc dmp. bmgle gr gl zw fylb gq glcddgagclr ylb rfyr'q ufw rfgq rcvr gq qm jmle. sqgle qrpgle.kyicrpylq() gq pcamkkclbcb. lmu ynnjw ml rfc spj."
+my_str = ""
+# в цикле передаем список (заменяемое, подставляемое) в метод replace
+for x,y in ("m","k"), ("q","o"),("g","o"):
+    stroka=stroka.replace(x,y)
+print(stroka)
 
