@@ -47,11 +47,21 @@ year=str(input().strip())
 cnt_on_year=len(year)
 mas_year=[0]*cnt_on_year #массив с разделенными цифрами года
 mas_proverka=[] #сюда записываю пвторяющиеся значения
+
+
+def povtorenie(x):
+    for i in range(len(x)):
+        if x[i] in x[i+1:-1]:
+            return 1
+
 for i in range(cnt_on_year):
     mas_year[i]=int(year[i])
+
 for i in range(cnt_on_year):
-    if (mas_year[i] in mas_year[i+1:-1]) and (mas_year[i] not in mas_proverka):
-        mas_proverka.append(mas_year[i])
-    else:
+    while (mas_year[i] in mas_year[i+1:-1]) or (mas_year[i] in mas_year[0:i]) or (mas_year[i]==0) or (mas_year[i]==2):
+        mas_year[i]+=1
+if (povtorenie(mas_year)!=1) and (0 not in mas_year) and (2 not in mas_year) and (cnt_on_year<=9):
+    print(*mas_year,sep="")
+else:
+    print("1")
         
-print(mas_year)
